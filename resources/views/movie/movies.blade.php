@@ -1,16 +1,6 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MovieMania</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<x-layout>
 
-    <link rel="stylesheet" href="/style.css">
-  </head>
-
-  <body>
+  
 
     <nav class="navbar navbar-expand-lg bg-dark border-bottom" data-bs-theme="dark">
       <div class="container-fluid">
@@ -68,19 +58,10 @@
 
       @foreach ($movies as $movie)
       <div class="col-12 col-md-3 my-3">
-        <div class="card mb-3" style="width: 18rem;">
-          <img src="{{$movie['img']}}" class="card-img-top cardImg" alt="poster di {{$movie['title']}}">
-          
-          <div class="card-body">
-            <h5 class="card-title">{{$movie['title']}}</h5>
-            <h6 class="card-subtitle text-muted">{{$movie['director']}}</h6>
-
-            <p class="card-text">{{$movie['genres']}}</p>
-
-           <a href="{{ route('movie.detail', $movie['id']) }}" class="btn btn-primary">leggi di più</a>
-
-          </div>
-        </div>
+        <x-card 
+        :movie='$movie'
+       title="{{ $movie['title'] }}"
+        />
       </div>
       @endforeach
 
@@ -88,6 +69,4 @@
   </div>
 </header>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
-</html>
+</x-layout>

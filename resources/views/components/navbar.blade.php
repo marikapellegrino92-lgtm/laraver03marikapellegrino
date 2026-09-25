@@ -1,6 +1,4 @@
-<x-layout>
-
-    <nav class="navbar navbar-expand-lg bg-dark border-bottom" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg bg-dark border-bottom" data-bs-theme="dark">
       <div class="container-fluid">
 
         <a class="navbar-brand text-light" href="{{route('homepage')}}">
@@ -45,25 +43,3 @@
 
       </div>
     </nav>
-
-    <header>
-  <div class="container-fluid movies">
-    <div class="row justify-content-center">
-      
-      <div class="col-12">
-        <h2 class="display-5 text-white text-center text-color">dettagli del film: {{$movie['title']}}</h2>
-      </div>
-      <div-col-12 class="col-md-6 text-white d-flex flex-column justify-content-center align-items-center">
-        <h3>Titolo:{{$movie['title']}}</h3>
-        <h4>Regista:{{$movie['director']}}</h4>
-        <p>Genere:{{$movie['genres']}}</p>
-      </div-col-12>
-      <div-col-12 class="col-md-6 d-flex justify-content-center">
-        <img src="{{$movie['img']}}" alt="poster di {{$movie['title']}}">
-      </div-col-12>
-    
-
-    </div>
-  </div>
-</header>
-</x-layout>
