@@ -23,7 +23,12 @@ class PublicController extends Controller
         return view('about-us', ['users' => $this->users]);
     }
 
-    
+    public function contacts(){
+        return view('contacts');
+    }
+
+
+
     public function aboutUsDetail($name){
         foreach($this->users as $user){
             if($name == $user['name']){

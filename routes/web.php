@@ -10,9 +10,8 @@ Route::get('/chi-siamo', [PublicController::class, 'aboutUs'])->name('aboutUs');
 
 Route::get('/chi-siamo/detail/{name}', [PublicController::class, 'aboutUsDetail'])->name('aboutUsDetail');
 
-Route::get('/contatti', function () {
-    return view('contacts');
-})->name('contacts');
+Route::get('/contatti', [PublicController::class, 'contacts'])->name('contacts');
+
 
 Route::get('/movies', [MovieController::class, 'movieList'])->name('movie.list');
 
