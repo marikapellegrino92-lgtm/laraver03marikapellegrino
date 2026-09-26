@@ -1,6 +1,6 @@
 /* HEADER HOME PAGE */
 .header {
-    background-image: url('./media/cinema2.png');
+    background-image: url('/media/cinema2.png');
     height: 95vh;
     background-position: center;
     background-repeat: no-repeat;
